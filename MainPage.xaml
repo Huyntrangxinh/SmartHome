@@ -5,8 +5,9 @@
     x:Class="SmartHomeDashboard2.MainPage"
     BackgroundColor="#F5F6FA">
 
-    <ScrollView>
-        <VerticalStackLayout Spacing="0">
+    <Grid RowDefinitions="*,Auto">
+        <ScrollView>
+            <VerticalStackLayout Spacing="0">
 
         <!-- HEADER CARD -->
         <Frame
@@ -905,6 +906,103 @@
 </Frame>
 
 
-        </VerticalStackLayout>
-    </ScrollView>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- BOTTOM NAVIGATION BAR -->
+        <Frame
+            Grid.Row="1"
+            BackgroundColor="White"
+            CornerRadius="24"
+            Padding="8"
+            Margin="16,0,16,16"
+            HasShadow="True"
+            BorderColor="Transparent">
+            
+            <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="0">
+                
+                <!-- Home (Selected) -->
+                <Frame
+                    CornerRadius="20"
+                    Padding="12,8"
+                    HasShadow="False"
+                    BorderColor="Transparent"
+                    BackgroundColor="#E0E7FF">
+                    <VerticalStackLayout
+                        Spacing="4"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center">
+                        <Image
+                            Source="home.png"
+                            WidthRequest="24"
+                            HeightRequest="24" />
+                        <Label
+                            Text="Home"
+                            FontSize="12"
+                            FontAttributes="Bold"
+                            TextColor="#3B5BFF"
+                            HorizontalOptions="Center" />
+                    </VerticalStackLayout>
+                </Frame>
+                
+                <!-- Rooms -->
+                <VerticalStackLayout
+                    Grid.Column="1"
+                    Spacing="4"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Padding="12,8">
+                    <Image
+                        Source="activity.png"
+                        WidthRequest="24"
+                        HeightRequest="24" />
+                    <Label
+                        Text="Rooms"
+                        FontSize="12"
+                        FontAttributes="Bold"
+                        TextColor="#111827"
+                        HorizontalOptions="Center" />
+                </VerticalStackLayout>
+                
+                <!-- Scenes -->
+                <VerticalStackLayout
+                    Grid.Column="2"
+                    Spacing="4"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Padding="12,8">
+                    <Image
+                        Source="wifi.png"
+                        WidthRequest="24"
+                        HeightRequest="24" />
+                    <Label
+                        Text="Scenes"
+                        FontSize="12"
+                        FontAttributes="Bold"
+                        TextColor="#111827"
+                        HorizontalOptions="Center" />
+                </VerticalStackLayout>
+                
+                <!-- Settings -->
+                <VerticalStackLayout
+                    Grid.Column="3"
+                    Spacing="4"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Padding="12,8">
+                    <Image
+                        Source="settings.png"
+                        WidthRequest="24"
+                        HeightRequest="24" />
+                    <Label
+                        Text="Settings"
+                        FontSize="12"
+                        FontAttributes="Bold"
+                        TextColor="#111827"
+                        HorizontalOptions="Center" />
+                </VerticalStackLayout>
+                
+            </Grid>
+        </Frame>
+    </Grid>
 </ContentPage>
