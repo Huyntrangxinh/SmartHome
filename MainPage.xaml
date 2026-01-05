@@ -5,102 +5,191 @@
     x:Class="SmartHomeDashboard2.MainPage"
     BackgroundColor="#F5F6FA">
 
-    <VerticalStackLayout Spacing="0">
+	<ScrollView>
+		<VerticalStackLayout Spacing="20">
 
-        <!-- HEADER CARD -->
-        <Frame
-            BackgroundColor="White"
-            CornerRadius="16"
-            HasShadow="True"
-            Padding="16"
-            Margin="16,12,16,0">
+			<!-- ================= HEADER ================= -->
+			<Frame
+                Margin="16,12,16,0"
+                Padding="16"
+                CornerRadius="16"
+                HasShadow="True"
+                BackgroundColor="White">
 
-            <Grid
-                ColumnDefinitions="Auto,*,Auto"
-                VerticalOptions="Center">
+				<Grid ColumnDefinitions="Auto,*,Auto">
 
-                <!-- LEFT ICON -->
-                <Frame
-                    WidthRequest="56"
-                    HeightRequest="56"
-                    CornerRadius="16"
-                    BackgroundColor="#6C63FF"
-                    Padding="12"
-                    HasShadow="True"
-                    VerticalOptions="Center">
+					<!-- Icon -->
+					<Frame
+                        WidthRequest="56"
+                        HeightRequest="56"
+                        CornerRadius="16"
+                        BackgroundColor="#6C63FF"
+                        Padding="12"
+                        HasShadow="True">
 
-                    <Image
-                        Source="home.png"
-                        WidthRequest="28"
-                        HeightRequest="28"
-                        Aspect="AspectFit" />
-                </Frame>
+						<Image Source="home.png" />
+					</Frame>
 
-                <!-- TITLE + SUBTITLE -->
-                <VerticalStackLayout
-                    Grid.Column="1"
-                    Spacing="6"
-                    Padding="16,0"
-                    VerticalOptions="Center">
+					<!-- Title -->
+					<VerticalStackLayout Grid.Column="1" Padding="16,0" Spacing="6">
+						<Label
+                            Text="Smart Home"
+                            FontSize="22"
+                            FontAttributes="Bold"
+                            TextColor="#1F2937" />
 
-                    <Label
-                        Text="Smart Home"
-                        FontSize="22"
-                        FontAttributes="Bold"
-                        TextColor="#1F2937" />
+						<HorizontalStackLayout Spacing="8">
+							<Image Source="wifi.png" WidthRequest="14" />
+							<Label Text="8 devices" FontSize="14" TextColor="#6B7280" />
+							<Label Text="•" TextColor="#9CA3AF" />
+							<Image Source="activity.png" WidthRequest="14" />
+							<Label Text="5 active" FontSize="14" TextColor="#6B7280" />
+						</HorizontalStackLayout>
+					</VerticalStackLayout>
 
-                    <HorizontalStackLayout
-                        Spacing="8"
-                        VerticalOptions="Center">
+					<!-- Actions -->
+					<HorizontalStackLayout Grid.Column="2" Spacing="14" VerticalOptions="Center">
+						<Image Source="menu.png" WidthRequest="14" />
+						<Image Source="moon.png" WidthRequest="14" />
+						<Image Source="settings.png" WidthRequest="14" />
+					</HorizontalStackLayout>
 
-                        <Image
-                            Source="wifi.png"
-                            WidthRequest="14"
-                            HeightRequest="14"
-                            VerticalOptions="Center" />
+				</Grid>
+			</Frame>
 
-                        <Label
-                            Text="8 devices"
-                            FontSize="14"
-                            TextColor="#6B7280"
-                            VerticalOptions="Center" />
+			<!-- ================= STATS GRID ================= -->
+			<Grid
+                Margin="16,0"
+                RowDefinitions="Auto,Auto"
+                ColumnDefinitions="*,*"
+                RowSpacing="12"
+                ColumnSpacing="12">
 
-                        <Label
-                            Text="•"
-                            FontSize="14"
-                            TextColor="#9CA3AF"
-                            VerticalOptions="Center" />
+				<!-- Active -->
+				<Frame Grid.Row="0" Grid.Column="0"
+                       CornerRadius="16"
+                       Padding="16"
+                       BackgroundColor="#E6FFF2">
+					<HorizontalStackLayout Spacing="12">
+						<Frame BackgroundColor="#22C55E" WidthRequest="40" HeightRequest="40" CornerRadius="20">
+							<Label Text="⚡" HorizontalOptions="Center" VerticalOptions="Center" />
+						</Frame>
+						<VerticalStackLayout>
+							<Label Text="5" FontSize="20" FontAttributes="Bold" />
+							<Label Text="Active Now" FontSize="13" TextColor="#16A34A" />
+						</VerticalStackLayout>
+					</HorizontalStackLayout>
+				</Frame>
 
-                        <Image
-                            Source="activity.png"
-                            WidthRequest="14"
-                            HeightRequest="14"
-                            VerticalOptions="Center" />
+				<!-- Efficiency -->
+				<Frame Grid.Row="0" Grid.Column="1"
+                       CornerRadius="16"
+                       Padding="16"
+                       BackgroundColor="#E0F7FF">
+					<HorizontalStackLayout Spacing="12">
+						<Frame BackgroundColor="#3B82F6" WidthRequest="40" HeightRequest="40" CornerRadius="20">
+							<Label Text="📈" HorizontalOptions="Center" VerticalOptions="Center" />
+						</Frame>
+						<VerticalStackLayout>
+							<Label Text="92%" FontSize="20" FontAttributes="Bold" />
+							<Label Text="Efficiency" FontSize="13" TextColor="#2563EB" />
+						</VerticalStackLayout>
+					</HorizontalStackLayout>
+				</Frame>
 
-                        <Label
-                            Text="5 active"
-                            FontSize="14"
-                            TextColor="#6B7280"
-                            VerticalOptions="Center" />
-                    </HorizontalStackLayout>
+				<!-- Family -->
+				<Frame Grid.Row="1" Grid.Column="0"
+                       CornerRadius="16"
+                       Padding="16"
+                       BackgroundColor="#F3E8FF">
+					<HorizontalStackLayout Spacing="12">
+						<Frame BackgroundColor="#A855F7" WidthRequest="40" HeightRequest="40" CornerRadius="20">
+							<Label Text="👨‍👩‍👧" HorizontalOptions="Center" VerticalOptions="Center" />
+						</Frame>
+						<VerticalStackLayout>
+							<Label Text="3" FontSize="20" FontAttributes="Bold" />
+							<Label Text="Family Home" FontSize="13" TextColor="#7C3AED" />
+						</VerticalStackLayout>
+					</HorizontalStackLayout>
+				</Frame>
 
-                </VerticalStackLayout>
+				<!-- Monitoring -->
+				<Frame Grid.Row="1" Grid.Column="1"
+                       CornerRadius="16"
+                       Padding="16"
+                       BackgroundColor="#FFF4D6">
+					<HorizontalStackLayout Spacing="12">
+						<Frame BackgroundColor="#F97316" WidthRequest="40" HeightRequest="40" CornerRadius="20">
+							<Label Text="⏰" HorizontalOptions="Center" VerticalOptions="Center" />
+						</Frame>
+						<VerticalStackLayout>
+							<Label Text="24/7" FontSize="20" FontAttributes="Bold" />
+							<Label Text="Monitoring" FontSize="13" TextColor="#EA580C" />
+						</VerticalStackLayout>
+					</HorizontalStackLayout>
+				</Frame>
 
-                <!-- RIGHT ACTION ICONS -->
-            <HorizontalStackLayout
-    Grid.Column="2"
-    Spacing="14"
-    VerticalOptions="Center">
+			</Grid>
 
-    <Image Source="menu.png" WidthRequest="14" HeightRequest="14" />
-    <Image Source="moon.png" WidthRequest="14" HeightRequest="14" />
-    <Image Source="settings.png" WidthRequest="14" HeightRequest="14" />
+			<!-- ================= QUICK ACTIONS ================= -->
+			<Frame
+                Margin="16,0"
+                Padding="16"
+                CornerRadius="20"
+                HasShadow="True"
+                BackgroundColor="White">
 
-</HorizontalStackLayout>
+				<VerticalStackLayout Spacing="16">
+					<Label Text="Quick Actions" FontSize="18" FontAttributes="Bold" />
 
+					<Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+						<Button
+                            Text="🏠 All On"
+                            BackgroundColor="#7C3AED"
+                            TextColor="White"
+                            CornerRadius="16" />
 
-            </Grid>
-        </Frame>
+						<Button
+                            Grid.Column="1"
+                            Text="🌙 Night Mode"
+                            BackgroundColor="#F1F5F9"
+                            TextColor="#111827"
+                            CornerRadius="16" />
+					</Grid>
+				</VerticalStackLayout>
+			</Frame>
 
-    </VerticalStackLayout>
+			<!-- ================= BOTTOM NAV ================= -->
+			<Frame
+                Margin="16,0,16,20"
+                Padding="12"
+                CornerRadius="22"
+                HasShadow="True"
+                BackgroundColor="White">
+
+				<Grid ColumnDefinitions="*,*,*,*">
+					<VerticalStackLayout Grid.Column="0" HorizontalOptions="Center">
+						<Label Text="🏠" />
+						<Label Text="Home" FontSize="12" TextColor="#2563EB" />
+					</VerticalStackLayout>
+
+					<VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
+						<Label Text="📍" />
+						<Label Text="Rooms" FontSize="12" />
+					</VerticalStackLayout>
+
+					<VerticalStackLayout Grid.Column="2" HorizontalOptions="Center">
+						<Label Text="📱" />
+						<Label Text="Scenes" FontSize="12" />
+					</VerticalStackLayout>
+
+					<VerticalStackLayout Grid.Column="3" HorizontalOptions="Center">
+						<Label Text="⚙️" />
+						<Label Text="Settings" FontSize="12" />
+					</VerticalStackLayout>
+				</Grid>
+			</Frame>
+
+		</VerticalStackLayout>
+	</ScrollView>
 </ContentPage>
