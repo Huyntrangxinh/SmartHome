@@ -725,6 +725,95 @@
 
         </VerticalStackLayout>
 
+        <!-- STATS CARDS SECTION -->
+        <Grid
+            ColumnDefinitions="*,*"
+            RowDefinitions="Auto"
+            ColumnSpacing="12"
+            RowSpacing="12"
+            Margin="16,24,16,0">
+            
+            <!-- Active Now Card -->
+            <Frame
+                CornerRadius="20"
+                Padding="20"
+                HasShadow="True"
+                BorderColor="Transparent"
+                BackgroundColor="#D1FAE5">
+                <Grid ColumnDefinitions="Auto,*" VerticalOptions="Center">
+                    <!-- Icon -->
+                    <Frame
+                        WidthRequest="48"
+                        HeightRequest="48"
+                        CornerRadius="24"
+                        BackgroundColor="#10B981"
+                        Padding="12"
+                        HasShadow="False"
+                        VerticalOptions="Center">
+                        <Label Text="📈" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Frame>
+                    
+                    <!-- Value and Label -->
+                    <VerticalStackLayout
+                        Grid.Column="1"
+                        Spacing="4"
+                        Padding="12,0,0,0"
+                        VerticalOptions="Center">
+                        <Label
+                            Text="5"
+                            FontSize="28"
+                            FontAttributes="Bold"
+                            TextColor="#10B981" />
+                        <Label
+                            Text="Active Now"
+                            FontSize="12"
+                            TextColor="#10B981" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <!-- Efficiency Card -->
+            <Frame
+                Grid.Column="1"
+                CornerRadius="20"
+                Padding="20"
+                HasShadow="True"
+                BorderColor="Transparent"
+                BackgroundColor="#DBEAFE">
+                <Grid ColumnDefinitions="Auto,*" VerticalOptions="Center">
+                    <!-- Icon -->
+                    <Frame
+                        WidthRequest="48"
+                        HeightRequest="48"
+                        CornerRadius="24"
+                        BackgroundColor="#3B82F6"
+                        Padding="12"
+                        HasShadow="False"
+                        VerticalOptions="Center">
+                        <Label Text="📊" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Frame>
+                    
+                    <!-- Value and Label -->
+                    <VerticalStackLayout
+                        Grid.Column="1"
+                        Spacing="4"
+                        Padding="12,0,0,0"
+                        VerticalOptions="Center">
+                        <Label
+                            Text="92%"
+                            FontSize="28"
+                            FontAttributes="Bold"
+                            TextColor="#3B82F6" />
+                        <Label
+                            Text="Efficiency"
+                            FontSize="12"
+                            TextColor="#3B82F6" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+        </Grid>
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
