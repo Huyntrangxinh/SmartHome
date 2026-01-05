@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartHomeDashboard.MainPage"
+             BackgroundColor="#F4F6FA">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="24"
+            Spacing="24">
+
+            <!-- ========================= -->
+            <!-- STATUS / GREETING CARD -->
+            <!-- PHẦN BẠN PHỤ TRÁCH -->
+            <!-- ========================= -->
+
+            <Frame
+                CornerRadius="24"
+                Padding="20"
+                HasShadow="True"
+                BackgroundColor="#7B5CFF">
+
+                <Grid ColumnDefinitions="*,Auto"
+                      RowDefinitions="Auto,Auto,Auto"
+                      RowSpacing="8">
+
+                    <!-- Greeting -->
+                    <Label
+                        Text="Good Evening!"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        Grid.ColumnSpan="2" />
+
+                    <!-- Subtitle -->
+                    <Label
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        Text="Your home is comfortable and secure"
+                        FontSize="14"
+                        TextColor="#EDEBFF" />
+
+                    <!-- Left info -->
+                    <HorizontalStackLayout
+                        Grid.Row="2"
+                        Spacing="16">
+
+                        <HorizontalStackLayout Spacing="6">
+                            <Label Text="🔒" FontSize="14"/>
+                            <Label Text="Secure"
+                                   FontSize="13"
+                                   TextColor="White"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Spacing="6">
+                            <Label Text="⚡" FontSize="14"/>
+                            <Label Text="89% Efficient"
+                                   FontSize="13"
+                                   TextColor="White"/>
+                        </HorizontalStackLayout>
+
+                    </HorizontalStackLayout>
+
+                    <!-- Temperature -->
+                    <VerticalStackLayout
+                        Grid.RowSpan="3"
+                        Grid.Column="1"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center">
+
+                        <Label
+                            Text="24°C"
+                            FontSize="32"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            HorizontalTextAlignment="End"/>
+
+                        <Label
+                            Text="Perfect"
+                            FontSize="13"
+                            TextColor="#EDEBFF"
+                            HorizontalTextAlignment="End"/>
+                    </VerticalStackLayout>
+
+                </Grid>
+            </Frame>
+
+            <!-- ========================= -->
+            <!-- CÁC PHẦN KHÁC -->
+            <!-- (ĐỂ NGƯỜI KHÁC LÀM) -->
+            <!-- ========================= -->
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
