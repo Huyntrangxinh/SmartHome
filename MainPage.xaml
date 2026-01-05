@@ -5,7 +5,8 @@
     x:Class="SmartHomeDashboard2.MainPage"
     BackgroundColor="#F5F6FA">
 
-    <VerticalStackLayout Spacing="0">
+    <ScrollView>
+        <VerticalStackLayout Spacing="0">
 
         <!-- HEADER CARD -->
         <Frame
@@ -183,14 +184,14 @@
             </Grid>
         </Frame>
 
-        <Frame
+<Frame
             x:Name="SegmentContainer"
             BackgroundColor="#E5E7EB"
-            CornerRadius="28"
-            HasShadow="True"
-            BorderColor="Transparent"
-            Padding="6"
-            Margin="16,16,16,0">
+    CornerRadius="28"
+    HasShadow="True"
+    BorderColor="Transparent"
+    Padding="6"
+    Margin="16,16,16,0">
 
     <Grid ColumnDefinitions="*,*,*" x:Name="SegmentGrid">
 
@@ -293,5 +294,437 @@
     </Grid>
 </Frame>
 
-    </VerticalStackLayout>
+        <!-- COMPACT CONTROL SECTION -->
+        <VerticalStackLayout Margin="16,24,16,0" Spacing="16">
+            
+            <!-- Title and Subtitle -->
+            <VerticalStackLayout Spacing="4">
+                <Label
+                    Text="Compact Control"
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    TextColor="#1F2937" />
+                <Label
+                    Text="Space-efficient cards for quick access"
+                    FontSize="14"
+                    TextColor="#6B7280" />
+            </VerticalStackLayout>
+
+            <!-- Device Cards -->
+            <VerticalStackLayout Spacing="12">
+                
+                <!-- Ceiling Fan Card -->
+                <Frame
+                    CornerRadius="16"
+                    Padding="16"
+                    HasShadow="True"
+                    BorderColor="Transparent">
+                    <Frame.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#E5E7EB" Offset="0.0" />
+                            <GradientStop Color="#9CA3AF" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    
+                    <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+                        <!-- Icon -->
+                        <Frame
+                            WidthRequest="48"
+                            HeightRequest="48"
+                            CornerRadius="24"
+                            BackgroundColor="#F3F4F6"
+                            Padding="12"
+                            VerticalOptions="Center">
+                            <Label Text="🌀" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Frame>
+                        
+                        <!-- Device Info -->
+                        <VerticalStackLayout
+                            Grid.Column="1"
+                            Spacing="4"
+                            Padding="12,0"
+                            VerticalOptions="Center">
+                            <Label
+                                Text="Ceiling Fan"
+                                FontSize="16"
+                                FontAttributes="Bold"
+                                TextColor="#1F2937" />
+                            <Label
+                                Text="Living Room"
+                                FontSize="13"
+                                TextColor="#6B7280" />
+                        </VerticalStackLayout>
+                        
+                        <!-- Toggle Switch -->
+                        <Switch
+                            Grid.Column="2"
+                            IsToggled="False"
+                            OnColor="#3B82F6"
+                            ThumbColor="White" />
+                    </Grid>
+                </Frame>
+
+                <!-- Air Conditioner Card -->
+                <Frame
+                    CornerRadius="16"
+                    Padding="16"
+                    HasShadow="True"
+                    BorderColor="Transparent">
+                    <Frame.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#E5E7EB" Offset="0.0" />
+                            <GradientStop Color="#9CA3AF" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    
+                    <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+                        <!-- Icon -->
+                        <Frame
+                            WidthRequest="48"
+                            HeightRequest="48"
+                            CornerRadius="24"
+                            BackgroundColor="#F3F4F6"
+                            Padding="12"
+                            VerticalOptions="Center">
+                            <Label Text="❄️" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Frame>
+                        
+                        <!-- Device Info -->
+                        <VerticalStackLayout
+                            Grid.Column="1"
+                            Spacing="4"
+                            Padding="12,0"
+                            VerticalOptions="Center">
+                            <Label
+                                Text="Air Conditioner"
+                                FontSize="16"
+                                FontAttributes="Bold"
+                                TextColor="#1F2937" />
+                            <Label
+                                Text="Bedroom"
+                                FontSize="13"
+                                TextColor="#6B7280" />
+                        </VerticalStackLayout>
+                        
+                        <!-- Toggle Switch -->
+                        <Switch
+                            Grid.Column="2"
+                            IsToggled="False"
+                            OnColor="#3B82F6"
+                            ThumbColor="White" />
+                    </Grid>
+                </Frame>
+
+                <!-- Smart TV Card -->
+                <Frame
+                    CornerRadius="16"
+                    Padding="16"
+                    HasShadow="True"
+                    BorderColor="Transparent">
+                    <Frame.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#E5E7EB" Offset="0.0" />
+                            <GradientStop Color="#9CA3AF" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    
+                    <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+                        <!-- Icon -->
+                        <Frame
+                            WidthRequest="48"
+                            HeightRequest="48"
+                            CornerRadius="24"
+                            BackgroundColor="#F3F4F6"
+                            Padding="12"
+                            VerticalOptions="Center">
+                            <Label Text="📺" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Frame>
+                        
+                        <!-- Device Info -->
+                        <VerticalStackLayout
+                            Grid.Column="1"
+                            Spacing="4"
+                            Padding="12,0"
+                            VerticalOptions="Center">
+                            <Label
+                                Text="Smart TV"
+                                FontSize="16"
+                                FontAttributes="Bold"
+                                TextColor="#1F2937" />
+                            <Label
+                                Text="Living Room"
+                                FontSize="13"
+                                TextColor="#6B7280" />
+                        </VerticalStackLayout>
+                        
+                        <!-- Toggle Switch -->
+                        <Switch
+                            Grid.Column="2"
+                            IsToggled="False"
+                            OnColor="#3B82F6"
+                            ThumbColor="White" />
+                    </Grid>
+                </Frame>
+
+                <!-- RGB Lights Card -->
+                <Frame
+                    CornerRadius="16"
+                    Padding="16"
+                    HasShadow="True"
+                    BorderColor="Transparent">
+                    <Frame.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#E5E7EB" Offset="0.0" />
+                            <GradientStop Color="#9CA3AF" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    
+                    <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+                        <!-- Icon -->
+                        <Frame
+                            WidthRequest="48"
+                            HeightRequest="48"
+                            CornerRadius="24"
+                            BackgroundColor="#F3F4F6"
+                            Padding="12"
+                            VerticalOptions="Center">
+                            <Label Text="💡" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Frame>
+                        
+                        <!-- Device Info -->
+                        <VerticalStackLayout
+                            Grid.Column="1"
+                            Spacing="4"
+                            Padding="12,0"
+                            VerticalOptions="Center">
+                            <Label
+                                Text="RGB Lights"
+                                FontSize="16"
+                                FontAttributes="Bold"
+                                TextColor="#1F2937" />
+                            <Label
+                                Text="Kitchen"
+                                FontSize="13"
+                                TextColor="#6B7280" />
+                        </VerticalStackLayout>
+                        
+                        <!-- Toggle Switch -->
+                        <Switch
+                            Grid.Column="2"
+                            IsToggled="False"
+                            OnColor="#3B82F6"
+                            ThumbColor="White" />
+                    </Grid>
+                </Frame>
+
+                <!-- Table Fan Card -->
+                <Frame
+                    CornerRadius="16"
+                    Padding="16"
+                    HasShadow="True"
+                    BorderColor="Transparent">
+                    <Frame.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#E5E7EB" Offset="0.0" />
+                            <GradientStop Color="#9CA3AF" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    
+                    <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+                        <!-- Icon -->
+                        <Frame
+                            WidthRequest="48"
+                            HeightRequest="48"
+                            CornerRadius="24"
+                            BackgroundColor="#F3F4F6"
+                            Padding="12"
+                            VerticalOptions="Center">
+                            <Label Text="🌀" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Frame>
+                        
+                        <!-- Device Info -->
+                        <VerticalStackLayout
+                            Grid.Column="1"
+                            Spacing="4"
+                            Padding="12,0"
+                            VerticalOptions="Center">
+                            <Label
+                                Text="Table Fan"
+                                FontSize="16"
+                                FontAttributes="Bold"
+                                TextColor="#1F2937" />
+                            <Label
+                                Text="Study Room"
+                                FontSize="13"
+                                TextColor="#6B7280" />
+                        </VerticalStackLayout>
+                        
+                        <!-- Toggle Switch -->
+                        <Switch
+                            Grid.Column="2"
+                            IsToggled="False"
+                            OnColor="#3B82F6"
+                            ThumbColor="White" />
+                    </Grid>
+                </Frame>
+
+                <!-- Pendant Lights Card -->
+                <Frame
+                    CornerRadius="16"
+                    Padding="16"
+                    HasShadow="True"
+                    BorderColor="Transparent">
+                    <Frame.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#E5E7EB" Offset="0.0" />
+                            <GradientStop Color="#9CA3AF" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    
+                    <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+                        <!-- Icon -->
+                        <Frame
+                            WidthRequest="48"
+                            HeightRequest="48"
+                            CornerRadius="24"
+                            BackgroundColor="#F3F4F6"
+                            Padding="12"
+                            VerticalOptions="Center">
+                            <Label Text="💡" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Frame>
+                        
+                        <!-- Device Info -->
+                        <VerticalStackLayout
+                            Grid.Column="1"
+                            Spacing="4"
+                            Padding="12,0"
+                            VerticalOptions="Center">
+                            <Label
+                                Text="Pendant Lights"
+                                FontSize="16"
+                                FontAttributes="Bold"
+                                TextColor="#1F2937" />
+                            <Label
+                                Text="Dining Room"
+                                FontSize="13"
+                                TextColor="#6B7280" />
+                        </VerticalStackLayout>
+                        
+                        <!-- Toggle Switch -->
+                        <Switch
+                            Grid.Column="2"
+                            IsToggled="False"
+                            OnColor="#3B82F6"
+                            ThumbColor="White" />
+                    </Grid>
+                </Frame>
+
+                <!-- Split AC Card -->
+                <Frame
+                    CornerRadius="16"
+                    Padding="16"
+                    HasShadow="True"
+                    BorderColor="Transparent">
+                    <Frame.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#E5E7EB" Offset="0.0" />
+                            <GradientStop Color="#9CA3AF" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    
+                    <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+                        <!-- Icon -->
+                        <Frame
+                            WidthRequest="48"
+                            HeightRequest="48"
+                            CornerRadius="24"
+                            BackgroundColor="#F3F4F6"
+                            Padding="12"
+                            VerticalOptions="Center">
+                            <Label Text="❄️" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Frame>
+                        
+                        <!-- Device Info -->
+                        <VerticalStackLayout
+                            Grid.Column="1"
+                            Spacing="4"
+                            Padding="12,0"
+                            VerticalOptions="Center">
+                            <Label
+                                Text="Split AC"
+                                FontSize="16"
+                                FontAttributes="Bold"
+                                TextColor="#1F2937" />
+                            <Label
+                                Text="Master Bedroom"
+                                FontSize="13"
+                                TextColor="#6B7280" />
+                        </VerticalStackLayout>
+                        
+                        <!-- Toggle Switch -->
+                        <Switch
+                            Grid.Column="2"
+                            IsToggled="False"
+                            OnColor="#3B82F6"
+                            ThumbColor="White" />
+                    </Grid>
+                </Frame>
+
+                <!-- TV Card -->
+                <Frame
+                    CornerRadius="16"
+                    Padding="16"
+                    HasShadow="True"
+                    BorderColor="Transparent">
+                    <Frame.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#E5E7EB" Offset="0.0" />
+                            <GradientStop Color="#9CA3AF" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    
+                    <Grid ColumnDefinitions="Auto,*,Auto" VerticalOptions="Center">
+                        <!-- Icon -->
+                        <Frame
+                            WidthRequest="48"
+                            HeightRequest="48"
+                            CornerRadius="24"
+                            BackgroundColor="#F3F4F6"
+                            Padding="12"
+                            VerticalOptions="Center">
+                            <Label Text="📺" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Frame>
+                        
+                        <!-- Device Info -->
+                        <VerticalStackLayout
+                            Grid.Column="1"
+                            Spacing="4"
+                            Padding="12,0"
+                            VerticalOptions="Center">
+                            <Label
+                                Text="TV"
+                                FontSize="16"
+                                FontAttributes="Bold"
+                                TextColor="#1F2937" />
+                            <Label
+                                Text="Bedroom"
+                                FontSize="13"
+                                TextColor="#6B7280" />
+                        </VerticalStackLayout>
+                        
+                        <!-- Toggle Switch -->
+                        <Switch
+                            Grid.Column="2"
+                            IsToggled="False"
+                            OnColor="#3B82F6"
+                            ThumbColor="White" />
+                    </Grid>
+                </Frame>
+
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
