@@ -101,6 +101,117 @@
 
             </Grid>
         </Frame>
+<Frame
+    x:Name="SegmentContainer"
+    BackgroundColor="#E5E7EB"
+    CornerRadius="28"
+    HasShadow="True"
+    BorderColor="Transparent"
+    Padding="6"
+    Margin="16,16,16,0">
+
+    <Grid ColumnDefinitions="*,*,*" x:Name="SegmentGrid">
+
+        <!-- COMPACT (ACTIVE) -->
+        <Frame
+            x:Name="CompactFrame"
+            Grid.Column="0"
+            BackgroundColor="White"
+            CornerRadius="22"
+            Padding="16,10"
+            HasShadow="True"
+            BorderColor="Transparent">
+            <Label
+                Text="Compact"
+                TextColor="#3B5BFF"
+                FontAttributes="Bold"
+                FontSize="16"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </Frame>
+        <Label
+            x:Name="CompactLabel"
+            Grid.Column="0"
+            Text="Compact"
+            FontSize="16"
+            FontAttributes="Bold"
+            TextColor="#111827"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            IsVisible="False">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnCompactTapped" />
+            </Label.GestureRecognizers>
+        </Label>
+
+        <!-- SMART -->
+        <Frame
+            x:Name="SmartFrame"
+            Grid.Column="1"
+            BackgroundColor="White"
+            CornerRadius="22"
+            Padding="16,10"
+            HasShadow="True"
+            BorderColor="Transparent"
+            IsVisible="False">
+            <Label
+                Text="Smart"
+                TextColor="#3B5BFF"
+                FontAttributes="Bold"
+                FontSize="16"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </Frame>
+        <Label
+            x:Name="SmartLabel"
+            Grid.Column="1"
+            Text="Smart"
+            FontSize="16"
+            FontAttributes="Bold"
+            TextColor="#111827"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnSmartTapped" />
+            </Label.GestureRecognizers>
+        </Label>
+
+        <!-- PREMIUM -->
+        <Frame
+            x:Name="PremiumFrame"
+            Grid.Column="2"
+            BackgroundColor="White"
+            CornerRadius="22"
+            Padding="16,10"
+            HasShadow="True"
+            BorderColor="Transparent"
+            IsVisible="False">
+            <Label
+                Text="Premium"
+                TextColor="#3B5BFF"
+                FontAttributes="Bold"
+                FontSize="16"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </Frame>
+        <Label
+            x:Name="PremiumLabel"
+            Grid.Column="2"
+            Text="Premium"
+            FontSize="16"
+            FontAttributes="Bold"
+            TextColor="#111827"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnPremiumTapped" />
+            </Label.GestureRecognizers>
+        </Label>
+
+    </Grid>
+</Frame>
+
+
 
     </VerticalStackLayout>
 </ContentPage>
