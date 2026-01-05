@@ -62,4 +62,12 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
 	</ItemGroup>
 
+	<!-- Exclude SmartHomeDashboard folder from build -->
+	<ItemGroup>
+		<Compile Remove="SmartHomeDashboard\**" />
+		<EmbeddedResource Remove="SmartHomeDashboard\**" />
+		<MauiXaml Remove="SmartHomeDashboard\**" />
+		<None Remove="SmartHomeDashboard\**" />
+	</ItemGroup>
+
 </Project>
