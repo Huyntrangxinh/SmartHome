@@ -5,29 +5,102 @@
     x:Class="SmartHomeDashboard2.MainPage"
     BackgroundColor="#F5F6FA">
 
-   <VerticalStackLayout
-    Padding="24"
-    VerticalOptions="Start"
-    HorizontalOptions="Start">
+    <VerticalStackLayout Spacing="0">
 
-
-        <!-- HOME ICON BUTTON -->
+        <!-- HEADER CARD -->
         <Frame
-            WidthRequest="64"
-            HeightRequest="64"
-            CornerRadius="20"
-            BackgroundColor="#6C63FF"
+            BackgroundColor="White"
+            CornerRadius="16"
             HasShadow="True"
-            Padding="14">
+            Padding="16"
+            Margin="16,12,16,0">
 
-            <Image
-                Source="home.png"
-                WidthRequest="36"
-                HeightRequest="36"
-                Aspect="AspectFit" />
+            <Grid
+                ColumnDefinitions="Auto,*,Auto"
+                VerticalOptions="Center">
 
+                <!-- LEFT ICON -->
+                <Frame
+                    WidthRequest="56"
+                    HeightRequest="56"
+                    CornerRadius="16"
+                    BackgroundColor="#6C63FF"
+                    Padding="12"
+                    HasShadow="True"
+                    VerticalOptions="Center">
+
+                    <Image
+                        Source="home.png"
+                        WidthRequest="28"
+                        HeightRequest="28"
+                        Aspect="AspectFit" />
+                </Frame>
+
+                <!-- TITLE + SUBTITLE -->
+                <VerticalStackLayout
+                    Grid.Column="1"
+                    Spacing="6"
+                    Padding="16,0"
+                    VerticalOptions="Center">
+
+                    <Label
+                        Text="Smart Home"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        TextColor="#1F2937" />
+
+                    <HorizontalStackLayout
+                        Spacing="8"
+                        VerticalOptions="Center">
+
+                        <Image
+                            Source="wifi.png"
+                            WidthRequest="14"
+                            HeightRequest="14"
+                            VerticalOptions="Center" />
+
+                        <Label
+                            Text="8 devices"
+                            FontSize="14"
+                            TextColor="#6B7280"
+                            VerticalOptions="Center" />
+
+                        <Label
+                            Text="•"
+                            FontSize="14"
+                            TextColor="#9CA3AF"
+                            VerticalOptions="Center" />
+
+                        <Image
+                            Source="activity.png"
+                            WidthRequest="14"
+                            HeightRequest="14"
+                            VerticalOptions="Center" />
+
+                        <Label
+                            Text="5 active"
+                            FontSize="14"
+                            TextColor="#6B7280"
+                            VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+
+                </VerticalStackLayout>
+
+                <!-- RIGHT ACTION ICONS -->
+            <HorizontalStackLayout
+    Grid.Column="2"
+    Spacing="14"
+    VerticalOptions="Center">
+
+    <Image Source="menu.png" WidthRequest="14" HeightRequest="14" />
+    <Image Source="moon.png" WidthRequest="14" HeightRequest="14" />
+    <Image Source="settings.png" WidthRequest="14" HeightRequest="14" />
+
+</HorizontalStackLayout>
+
+
+            </Grid>
         </Frame>
 
     </VerticalStackLayout>
-
 </ContentPage>
